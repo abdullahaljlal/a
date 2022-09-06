@@ -77,13 +77,38 @@
         
 
 
-                            <iframe    width="49%"    accesskey="nono" aria-busy="false"  sandbox=" allow-top-navigation allow-modals allow-scripts allow-same-origin allow-popups-to-escape-sandbox allow-popups allow-pointer-lock allow-modals allow-forms allow-modals allow-modals allow-scripts allow-pointer-lock allow-popups allow-popups-to-escape-sandbox"  allowfullscreen  src="MAAAAA.html" height="45%"      ></iframe>
+<!-- Messenger المكون الإضافي "دردشة" Code -->
+    <div id="fb-root"></div>
 
-                            <iframe    width="49%"    accesskey="nono" aria-busy="false"  sandbox=" allow-top-navigation allow-modals allow-scripts allow-same-origin allow-popups-to-escape-sandbox allow-popups allow-pointer-lock allow-modals allow-forms allow-modals allow-modals allow-scripts allow-pointer-lock allow-popups allow-popups-to-escape-sandbox"  allowfullscreen  src="MAAAAA.html" height="45%"      ></iframe>
+    <!-- Your المكون الإضافي "دردشة" code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-                            <iframe    width="49%"    accesskey="nono" aria-busy="false"  sandbox=" allow-top-navigation allow-modals allow-scripts allow-same-origin allow-popups-to-escape-sandbox allow-popups allow-pointer-lock allow-modals allow-forms allow-modals allow-modals allow-scripts allow-pointer-lock allow-popups allow-popups-to-escape-sandbox"  allowfullscreen  src="MAAAAA.html" height="45%"      ></iframe>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103009992479160");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-                            <iframe    width="49%"    accesskey="nono" aria-busy="false"  sandbox=" allow-top-navigation allow-modals allow-scripts allow-same-origin allow-popups-to-escape-sandbox allow-popups allow-pointer-lock allow-modals allow-forms allow-modals allow-modals allow-scripts allow-pointer-lock allow-popups allow-popups-to-escape-sandbox"  allowfullscreen  src="MAAAAA.html" height="45%"      ></iframe>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
 
             </article>
                 
