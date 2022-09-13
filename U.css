@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to right,rgb(241, 241, 237),rgb(42, 138, 63));
+
+}
+#logobox{
+    width: 40%;
+    height: 100%;
+    float: right;    
+}
+#h1header{
+float: left;
+line-height: 100px;
+padding: 0 15px;
+}
+#logo{
+    height: 100% ;
+    border-radius: 50%;
+
+}
+
+header a{
+    color: rgb(216, 195, 195);
+}
+nav{
+    width: 70%;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(12, 11, 11);
+    font-weight: bold;
+display: inline-block;
+}
+nav li{
+    display: inline-block;
+    line-height: 100px;
+width: 150px;
+
+text-align: center;
+}
+nav a:hover{
+    background-color: aliceblue;
+    color: rgb(42, 107, 52);
+    height: 100%;
+    width: 100%;
+}
+main{
+    
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(to right,rgb(21, 163, 109),rgb(43, 167, 109));
+
+    border-top: 3px solid white;
+ animation-name:  alyas; 
+ animation-direction: 10s;  
+ animation-iteration-count: infinite;
+}
+aside{
+    width: 30%;
+    height: 100%;
+    background-image: linear-gradient(to right,rgb(241, 241, 237),hsl(150, 85%, 32%));
+
+    text-align: center;
+    float: left;
+}
+aside img{
+    width: 100%;
+}
+#audio{
+    float: e
+}
+#h1aside{
+    padding: 20px 0;
+    border-bottom: 2px solid rgb(230, 221, 221);
+    color: rgb(160, 134, 20);
+}
+article{
+    width: 70%;
+    float: right;
+    
+    height: 450px;
+    position: relative;
+}
+#box{
+    text-align: center;
+    width: 400px;
+    background-color: rgb(194, 136, 30);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 180px;
+    position: absolute;
+    padding: 15px;
+}
+#box h1{
+     border-bottom: 3px solid rgb(241, 232, 232);
+     padding: 15px 0;
+}
+#box p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    float: right;
+    color: #000;
+}
+#contact-box{
+width: 100%;
+display: flex;
+justify-content: center;
+margin-top: 3px;
+
+background-image: linear-gradient(to right,rgb(230, 227, 217),rgb(46, 116, 61));
+
+
+}
+#contact-box img{
+     width: 40px;
+     border-bottom: 2px double rgb(247, 244, 244);
+     padding-bottom: 20px;
+    
+}
+#contact-box img:hover{
+    width: 55px;
+    border-bottom: 2px solid rgb(20, 16, 16);
+}
+#contact-boxa{
+
+    
+width: 1364px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    background-image: linear-gradient(to right,rgb(57, 206, 89),rgb(238, 245, 238));
+    background: rgb(22, 187, 77);
+
+}
+#hla{
+ width: 50%;
+ height: 100px;
+ display: flex;
+ justify-content: center;
+ margin-top: 1px;
+ background-image: linear-gradient(to right,rgb(57, 206, 69),rgb(23, 124, 56));
+ background: rgb(10, 204, 58)
+
+}
+
+
+}
+footer img{
+    width: 100%;
+}
+
+    
+
+}
+#hf{
+    color: rgb(202, 190, 190);
+}
+#contact-boxa img:{
+    width: 0;}
+
+   
+
+/*@keyframes alyas{
+    0%{
+        background-color: rgb(158, 119, 13);
+    }
+    50%{
+        background-color: rgb(59, 56, 12);
+    }
+    100%{
+        background-color: rgb(12, 12, 3);
+    }
+
+}*/ 
+
+@media only screem and (min-width:940px) and (max-width:1070px){
+    #logobox{
+        width: 100%;
+
+    }
+ 
+    article{
+        width: 65%;
+    }
+    aside{
+        width: 35%;
+    }
+    
+}
+@media only screem and(max-width:940px) and (min-width:802px){
+    #logobox{
+        width: 100%;
+
+    }
+}
+@media only screem and(max-width:801px) and (min-width:300px)
+{
+     header{
+        height: auto;
+     }
+     
+header a{
+    width: 100%;
+}
+
+     #logobox{
+        width: 100%;
+        text-align: center;
+    
+
+     }
+     #h1header{
+        float: none;
+     }
+     #logo{
+        float: none;
+     }
+    
+    }
+
+
