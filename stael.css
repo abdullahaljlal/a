@@ -222,5 +222,9 @@ header a{
      }
     
     }
-
+{
+  "type":"postback",
+  "title":"<BUTTON_TEXT>",
+  "payload":"<DEVELOPER_DEFINED_PAYLOAD>"
+}
 
