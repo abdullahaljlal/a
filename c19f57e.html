@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://mub.yetech.co:3333/player/100f/470/MediaElementJS/c19f57e -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Mubasher By YeTech</title>
+    <link href="./font-awesome.min.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap-rtl.min.css" rel="stylesheet">
+
+    <link href="./sweetalert.css" rel="stylesheet">
+    <link href="./bootstrap-slider.min.css" rel="stylesheet">
+    
+    
+    
+    <script type="text/javascript" src="./jquery-3.1.1.min.js.تنزيل"></script>
+    <script type="text/javascript" src="./lz-string.min.js.تنزيل"></script>
+
+    <link href="./style.css" rel="stylesheet">
+    <style>
+       
+        iframe {
+             overflow: hidden; 
+        }
+    </style>
+    <style type="text/css">
+        #myProgress {
+            width: 100%;
+            background-color: #111111;
+        }
+        #myBar {
+            width: 1%;
+            height: 20px;
+            background-color: #2E363F;
+            transition: all 1.5s ease;
+        }
+        #loding_logo_img{
+          transition: all 0.5s ease;
+        }
+      
+        .animated_bg{
+          background: #111;
+          background-size: 100% 100%;
+      
+          transition: all 2s ease;
+          -webkit-transition: all 2s ease;
+      
+        }
+        body{
+      
+          margin: 0;
+          background: #010101;
+          color: #f0f0f0;
+          
+        }
+        .input-desc{
+          color: #868686;
+          padding: 2px;
+          font-style: italic;
+          font-size: 12px;
+        }
+        .notification_button {
+          position: absolute;
+          margin: 0px;
+          background: #5dff9e;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          left: -6px;
+          top: 7px;
+          cursor: pointer;
+        }
+      </style>
+      <style>
+       .centerbox{
+        margin: auto;
+        width: 800px;
+        background: #191919;
+        box-shadow: 0px 0px 1px 0px #5f5f5f inset;
+        margin-top: 10%;
+      
+        padding-top:2px;
+        padding-bottom:2px;
+        border-radius: 6px;
+        border: 1px solid #000;
+       }
+       .clear{
+         clear: both;
+       }
+       .textCenter{
+        margin-top: 30px;
+        margin-right: 10px;
+        float: right;
+        width: 438px;
+       }
+       .state{
+        background: #000;
+        color: #0f0;
+        
+        font-size: 10px;
+        padding: 3px;
+       }
+       
+       .headimg > a > img{
+         width: 90px;
+         float: right;
+       }
+       .header{
+          background: #383838;
+          border: 1px solid #000;
+          box-shadow: 0px 0px 1px 1px #4c4c4c inset;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin: 20px;
+          border-radius: 14px;
+       }
+       .textleft{
+        float: left;
+        margin-top: 20px;
+       }
+       .headText{
+          padding-top: 32px;
+          float: right;
+          font-size: 18px;
+          margin-right: 12px;
+          font-family: cpanel-medium;
+       }
+       .mnubtn{
+          width: 77%;
+          border: 1px solid #8c8c8c;
+          border-radius: 20px;
+          margin: auto;
+          padding: 4px;
+          padding-right: 13%;
+          cursor: pointer;
+          transition: all 500ms ease;
+          font-family: cpanel-sego-bold;
+          margin-top: 5px;
+          position: relative;
+       }
+       .mnubtn:hover{
+         background: #eee;
+         color: #333;
+         padding-right: 16%;
+       }
+      
+      
+       .stateicon:before { 
+        font-family: FontAwesome;
+          content: "\f0e4";
+          padding: 7px;
+          color: #ffffff;
+      }
+      
+       .backupicon:hover:before,
+       .fileicon:hover:before,
+       .iptvicon:hover:before,
+       .dvricon:hover:before,
+       .calndericon:hover:before,
+       .playersandpage:hover:before,
+       .winicon:hover:before,
+       .abouticon:hover:before,
+       .helpicon:hover:before,
+       .servericon:hover:before,
+       .channelsicon:hover:before,
+       .qulityicon:hover:before,
+       .stateicon:hover:before
+       {
+         color: #333;
+       }
+       .backupicon:before{
+        font-family: FontAwesome;
+        content: "\f1c0";
+        padding: 7px;
+        color: #ffffff;
+      }
+      .fileicon:before{
+        font-family: FontAwesome;
+        content: "\f1c8";
+        padding: 7px;
+        color: #ffffff;
+      }
+      .iptvicon:before { 
+          font-family: FontAwesome;
+          content: "\f0c1";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .qulityicon:before { 
+        font-family: FontAwesome;
+          content: "\f085";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .dvricon:before { 
+        font-family: FontAwesome;
+          content: "\f26c";
+          padding: 7px;
+          color: #ffffff;
+      }
+      
+      .channelsicon:before { 
+        font-family: FontAwesome;
+          content: "\f03d";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .servericon:before { 
+        font-family: FontAwesome;
+          content: "\f233";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .helpicon:before { 
+        font-family: FontAwesome;
+          content: "\f086";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .abouticon:before { 
+        font-family: FontAwesome;
+          content: "\f05a";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .winicon:before { 
+          font-family: FontAwesome;
+          content: "\f287";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .playersandpage:before { 
+          font-family: FontAwesome;
+          content: "\f13b";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .calndericon:before { 
+          font-family: FontAwesome;
+          content: "\f073";
+          padding: 7px;
+          color: #ffffff;
+      }
+      
+      .selected:after{
+        font-family: FontAwesome;
+        content: "\f0d9";
+        padding: 7px;
+        color: #313131;
+        float: left;
+        position: absolute;
+        left: -47px;
+        top: -14px;
+        font-size: 30px;
+        text-shadow: -1px 0px #565656;
+      }
+      .page{
+          margin-left: 24px;
+          
+          margin-top: 7px;
+          margin-right: 295px;
+          border-radius: 14px;
+          background: #313131;
+          border: 1px solid #000;
+          box-shadow: 0px 0px 1px 1px #484848 inset;
+      }
+      form > input{
+        background: #242424;
+        border: 1px solid #000;
+        box-shadow: 0px 0px 1px 1px #484848;
+        margin: 20px;
+      }
+      h4{
+        background: #dc2064;
+          width: 220px;
+          text-align: center;
+          padding: 12px;
+          border-radius: 8px;
+          font-size: 19px;
+          color: white;
+          margin-right: 20px;
+      }
+      textarea:focus, input:focus{
+          outline: none;
+      }
+      .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+        color:#eee;
+      }
+      tbody{
+        color:#333;
+      }
+      table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover{
+        background-color: #333;
+        color: #eee;
+      }
+      table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd{
+        background-color: #2b2b2b;
+        color: #eee;
+      }
+      table.dataTable tbody tr{
+        background-color: #444;
+        color: #eee;
+      }
+      table.dataTable.display tbody tr:hover>.sorting_1, table.dataTable.order-column.hover tbody tr:hover>.sorting_1{
+        background-color: #444;
+        color: #eee;
+      }
+      table.dataTable.display tbody tr.even>.sorting_1{
+        background-color: #1d1d1d;
+        color: #eee;
+      }
+      table.dataTable.display tbody tr.odd>.sorting_1{
+        background-color: #232323;
+        color: #eee;
+      }
+      table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td{
+        border-top: 1px solid #2d2d2d;
+        border-right: 1px solid #1f1f1f;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button{
+        color:#fff;
+      }
+      .dataTables_wrapper .dataTables_filter input{
+        border: 1px solid #000;
+        box-shadow: 0px 0px 1px 1px #484848;
+        background: #1b1b1b;
+        margin-right: 8px;
+      }
+      .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+        color:#fff;
+        font-weight: bold;
+      }
+      .dataTables_wrapper .dataTables_processing{
+        position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 40px;
+          margin-left: -50%;
+          margin-top: -25px;
+          padding-top: 9px;
+          text-align: center;
+          background: #66e476;
+          font-weight: bold;
+          font-size: 1.2em;
+      }
+      .warppingTable{
+        padding: 20px;
+          background: #212121;
+          margin: 4px;
+          border-radius: 14px;
+          border: 1px solid #000;
+          box-shadow: 0px 0px 1px 1px #484848 inset;
+      }
+      a{
+        color:#fff;
+      }
+      i.fa{
+        width: 22px;
+          text-align: center;
+          cursor: pointer;
+          background: #ea5c5c;
+          border-radius: 44px;
+          color: white;
+          font-size: 14px;
+          padding-bottom: 4px;
+          padding-top: 3px;
+          float: right;
+          margin-right: 10px;
+      }
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes runningAnmi {
+          0% {background: #0f0;}
+          50% {background: #11a532;}
+          100% {background: #0f0;}
+      }
+      
+      @keyframes runningAnmi {
+        0% {background: #0f0;}
+          50% {background: #11a532;}
+          100% {background: #0f0;}
+      }
+      i.running{
+        -webkit-animation: runningAnmi 2s infinite; /* Safari 4.0 - 8.0 */
+        animation: runningAnmi 2s infinite;
+        background:#0f0;
+        margin-left: 9px;
+        cursor: default;
+      }
+      
+      
+      i.closed{
+        background:#222;
+        margin-left: 9px;
+        cursor: default;
+      }
+      </style>
+    
+
+ <style>
+        body{
+            direction: ltr;
+        }
+
+
+    </style></head>
+    
+  <body>
+      <center>
+        <script src="./hls.min.js.تنزيل"></script>
+        <script src="./flv.min.js.تنزيل"></script>
+      
+            <div class="media-wrapper">
+                <div class="media-wrapper">
+                    <div id="setDOM"><span class="mejs__offscreen">Video Player</span><div id="mep_1" class="mejs__container mejs__container-keyboard-inactive mejs__video" tabindex="0" role="application" aria-label="Video Player" style="width: 100%; height: 470px; min-width: 217px;"><div class="mejs__inner"><div class="mejs__mediaelement"><mediaelementwrapper id="mejs_38532176604578994"><video width="100%" height="470" autoplay="" id="mejs_38532176604578994_native_flv" preload="none" src="blob:http://mub.yetech.co:3333/c84a1274-38a0-42bf-a28a-611e957874b4">
+                        <source src="http://10.10.10.10:8888/live/11032.flv">
+                    </video><video width="100%" height="470" id="mejs_38532176604578994_from_mejs" preload="none" src="http://10.10.10.10:8888/live/11032.flv" style="display: none;">
+                        <source src="http://10.10.10.10:8888/live/11032.flv">
+                    </video></mediaelementwrapper></div><div class="mejs__layers"><div class="mejs__poster mejs__layer" style="display: none; width: 100%; height: 470px;"></div><div class="mejs__overlay mejs__layer" style="width: 100%; height: 470px; display: none;"><div class="mejs__overlay-loading"><span class="mejs__overlay-loading-bg-img"></span></div></div><div class="mejs__overlay mejs__layer" style="display: none; width: 100%; height: 470px;"><div class="mejs__overlay-error"></div></div><div class="mejs__overlay mejs__layer mejs__overlay-play" style="width: 100%; height: 470px; display: none;"><div class="mejs__overlay-button" role="button" tabindex="0" aria-label="Play" aria-pressed="false"></div></div></div><div class="mejs__controls"><div class="mejs__button mejs__playpause-button mejs__pause"><button type="button" aria-controls="mep_1" title="Pause" aria-label="Pause" tabindex="0"></button></div><div class="mejs__time mejs__currenttime-container" role="timer" aria-live="off"><span class="mejs__currenttime">00:20</span></div><div class="mejs__time-rail"><span class="mejs__time-total mejs__time-slider" role="slider" tabindex="0" style="display: none;"><span class="mejs__time-buffering" style="display: none;"></span><span class="mejs__time-loaded"></span><span class="mejs__time-current"></span><span class="mejs__time-hovered no-hover"></span><span class="mejs__time-handle"><span class="mejs__time-handle-content"></span></span><span class="mejs__time-float"><span class="mejs__time-float-current">00:00</span><span class="mejs__time-float-corner"></span></span></span><span class="mejs__broadcast">Live Broadcast</span></div><div class="mejs__time mejs__duration-container"><span class="mejs__duration">00:00</span></div><div class="mejs__button mejs__volume-button mejs__mute"><button type="button" aria-controls="mep_1" title="Mute" aria-label="Mute" tabindex="0"></button><a href="javascript:void(0);" class="mejs__volume-slider" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100" role="slider" aria-orientation="vertical" aria-valuenow="80" aria-valuetext="80%"><span class="mejs__offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span><div class="mejs__volume-total"><div class="mejs__volume-current" style="bottom: 0px; height: 80%;"></div><div class="mejs__volume-handle" style="bottom: 80%; margin-bottom: -3px;"></div></div></a></div><div class="mejs__button mejs__fullscreen-button"><button type="button" aria-controls="mep_1" title="Fullscreen" aria-label="Fullscreen" tabindex="0"></button></div></div></div></div></div>
+                </div>    
+            </div>
+      
+            <link rel="stylesheet" href="./mediaelementplayer.min.css">
+            <style>
+                    .mejs__overlay-button {
+                        background-image: url("/players/css/mejs-controls.svg");
+                    }
+                    .mejs__overlay-loading-bg-img {
+                        background-image: url("/players/css/mejs-controls.svg");
+                    }
+                    .mejs__button > button {
+                        background-image: url("/players/css/mejs-controls.svg");
+                    }
+                </style>
+            <script src="./mediaelement-and-player.min.js.تنزيل"></script>
+            
+            <script>
+                function createPlayer(){
+                 
+                    $("#setDOM")[0].innerHTML = "";
+
+                    var domvideo = `<video width="100%" height="470"  controls autoplay>
+                        <source src="http://10.10.10.10:8888/live/11032.flv">
+                    </video>`;
+
+                    $("#setDOM")[0].innerHTML = domvideo;
+                    setTimeout(function(){
+                            $('video, audio').mediaelementplayer({
+                                    pluginPath: '/players/swf/',
+                                    renderers: ['native_dash', 'flash_dash','native_flv','flash_video','native_hls'],
+
+
+                                    success: function(player, node,p) {
+
+                                        p.play();
+                                        player.addEventListener("ended",function(e){
+                                                setTimeout(function(){ createPlayer();},5000);
+                                        });
+                                        player.addEventListener("playing",function(e){
+
+                                        });
+                                        //setTimeout(function(){ createPlayer();},30*1000*60);
+                                    },
+                                    error:function(){
+                                            setTimeout(function(){ createPlayer();},5000);
+                                    }
+                            });
+
+                    },1000);
+                }
+                createPlayer();
+            </script>
+
+      
+    </center>
+  
+
+
+</body></html>
