@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://mub.yetech.co:3333/channel/c19f57e -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Mubasher By YeTech</title>
+    <link href="font-awesome.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-rtl.min.css" rel="stylesheet">
+
+    <link href="sweetalert.css" rel="stylesheet">
+    <link href="bootstrap-slider.min.css" rel="stylesheet">
+    
+    
+    
+    <script type="text/javascript" src="./Mubasher By YeTech_files/jquery-3.1.1.min.js.تنزيل"></script>
+    <script type="text/javascript" src="./Mubasher By YeTech_files/lz-string.min.js.تنزيل"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <style>
+       
+        iframe {
+             overflow: hidden; 
+        }
+    </style>
+    <style type="text/css">
+        #myProgress {
+            width: 100%;
+            background-color: #111111;
+        }
+        #myBar {
+            width: 1%;
+            height: 20px;
+            background-color: #2E363F;
+            transition: all 1.5s ease;
+        }
+        #loding_logo_img{
+          transition: all 0.5s ease;
+        }
+      
+        .animated_bg{
+          background: #111;
+          background-size: 100% 100%;
+      
+          transition: all 2s ease;
+          -webkit-transition: all 2s ease;
+      
+        }
+        body{
+      
+          margin: 0;
+          background: #010101;
+          color: #f0f0f0;
+          
+        }
+        .input-desc{
+          color: #868686;
+          padding: 2px;
+          font-style: italic;
+          font-size: 12px;
+        }
+        .notification_button {
+          position: absolute;
+          margin: 0px;
+          background: #5dff9e;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          left: -6px;
+          top: 7px;
+          cursor: pointer;
+        }
+      </style>
+      <style>
+       .centerbox{
+        margin: auto;
+        width: 800px;
+        background: #191919;
+        box-shadow: 0px 0px 1px 0px #5f5f5f inset;
+        margin-top: 10%;
+      
+        padding-top:2px;
+        padding-bottom:2px;
+        border-radius: 6px;
+        border: 1px solid #000;
+       }
+       .clear{
+         clear: both;
+       }
+       .textCenter{
+        margin-top: 30px;
+        margin-right: 10px;
+        float: right;
+        width: 438px;
+       }
+       .state{
+        background: #000;
+        color: #0f0;
+        
+        font-size: 10px;
+        padding: 3px;
+       }
+       
+       .headimg > a > img{
+         width: 90px;
+         float: right;
+       }
+       .header{
+          background: #383838;
+          border: 1px solid #000;
+          box-shadow: 0px 0px 1px 1px #4c4c4c inset;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin: 20px;
+          border-radius: 14px;
+       }
+       .textleft{
+        float: left;
+        margin-top: 20px;
+       }
+       .headText{
+          padding-top: 32px;
+          float: right;
+          font-size: 18px;
+          margin-right: 12px;
+          font-family: cpanel-medium;
+       }
+       .mnubtn{
+          width: 77%;
+          border: 1px solid #8c8c8c;
+          border-radius: 20px;
+          margin: auto;
+          padding: 4px;
+          padding-right: 13%;
+          cursor: pointer;
+          transition: all 500ms ease;
+          font-family: cpanel-sego-bold;
+          margin-top: 5px;
+          position: relative;
+       }
+       .mnubtn:hover{
+         background: #eee;
+         color: #333;
+         padding-right: 16%;
+       }
+      
+      
+       .stateicon:before { 
+        font-family: FontAwesome;
+          content: "\f0e4";
+          padding: 7px;
+          color: #ffffff;
+      }
+      
+       .backupicon:hover:before,
+       .fileicon:hover:before,
+       .iptvicon:hover:before,
+       .dvricon:hover:before,
+       .calndericon:hover:before,
+       .playersandpage:hover:before,
+       .winicon:hover:before,
+       .abouticon:hover:before,
+       .helpicon:hover:before,
+       .servericon:hover:before,
+       .channelsicon:hover:before,
+       .qulityicon:hover:before,
+       .stateicon:hover:before
+       {
+         color: #333;
+       }
+       .backupicon:before{
+        font-family: FontAwesome;
+        content: "\f1c0";
+        padding: 7px;
+        color: #ffffff;
+      }
+      .fileicon:before{
+        font-family: FontAwesome;
+        content: "\f1c8";
+        padding: 7px;
+        color: #ffffff;
+      }
+      .iptvicon:before { 
+          font-family: FontAwesome;
+          content: "\f0c1";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .qulityicon:before { 
+        font-family: FontAwesome;
+          content: "\f085";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .dvricon:before { 
+        font-family: FontAwesome;
+          content: "\f26c";
+          padding: 7px;
+          color: #ffffff;
+      }
+      
+      .channelsicon:before { 
+        font-family: FontAwesome;
+          content: "\f03d";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .servericon:before { 
+        font-family: FontAwesome;
+          content: "\f233";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .helpicon:before { 
+        font-family: FontAwesome;
+          content: "\f086";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .abouticon:before { 
+        font-family: FontAwesome;
+          content: "\f05a";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .winicon:before { 
+          font-family: FontAwesome;
+          content: "\f287";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .playersandpage:before { 
+          font-family: FontAwesome;
+          content: "\f13b";
+          padding: 7px;
+          color: #ffffff;
+      }
+      .calndericon:before { 
+          font-family: FontAwesome;
+          content: "\f073";
+          padding: 7px;
+          color: #ffffff;
+      }
+      
+      .selected:after{
+        font-family: FontAwesome;
+        content: "\f0d9";
+        padding: 7px;
+        color: #313131;
+        float: left;
+        position: absolute;
+        left: -47px;
+        top: -14px;
+        font-size: 30px;
+        text-shadow: -1px 0px #565656;
+      }
+      .page{
+          margin-left: 24px;
+          
+          margin-top: 7px;
+          margin-right: 295px;
+          border-radius: 14px;
+          background: #313131;
+          border: 1px solid #000;
+          box-shadow: 0px 0px 1px 1px #484848 inset;
+      }
+      form > input{
+        background: #242424;
+        border: 1px solid #000;
+        box-shadow: 0px 0px 1px 1px #484848;
+        margin: 20px;
+      }
+      h4{
+        background: #dc2064;
+          width: 220px;
+          text-align: center;
+          padding: 12px;
+          border-radius: 8px;
+          font-size: 19px;
+          color: white;
+          margin-right: 20px;
+      }
+      textarea:focus, input:focus{
+          outline: none;
+      }
+      .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+        color:#eee;
+      }
+      tbody{
+        color:#333;
+      }
+      table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover{
+        background-color: #333;
+        color: #eee;
+      }
+      table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd{
+        background-color: #2b2b2b;
+        color: #eee;
+      }
+      table.dataTable tbody tr{
+        background-color: #444;
+        color: #eee;
+      }
+      table.dataTable.display tbody tr:hover>.sorting_1, table.dataTable.order-column.hover tbody tr:hover>.sorting_1{
+        background-color: #444;
+        color: #eee;
+      }
+      table.dataTable.display tbody tr.even>.sorting_1{
+        background-color: #1d1d1d;
+        color: #eee;
+      }
+      table.dataTable.display tbody tr.odd>.sorting_1{
+        background-color: #232323;
+        color: #eee;
+      }
+      table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td{
+        border-top: 1px solid #2d2d2d;
+        border-right: 1px solid #1f1f1f;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button{
+        color:#fff;
+      }
+      .dataTables_wrapper .dataTables_filter input{
+        border: 1px solid #000;
+        box-shadow: 0px 0px 1px 1px #484848;
+        background: #1b1b1b;
+        margin-right: 8px;
+      }
+      .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+        color:#fff;
+        font-weight: bold;
+      }
+      .dataTables_wrapper .dataTables_processing{
+        position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 40px;
+          margin-left: -50%;
+          margin-top: -25px;
+          padding-top: 9px;
+          text-align: center;
+          background: #66e476;
+          font-weight: bold;
+          font-size: 1.2em;
+      }
+      .warppingTable{
+        padding: 20px;
+          background: #212121;
+          margin: 4px;
+          border-radius: 14px;
+          border: 1px solid #000;
+          box-shadow: 0px 0px 1px 1px #484848 inset;
+      }
+      a{
+        color:#fff;
+      }
+      i.fa{
+        width: 22px;
+          text-align: center;
+          cursor: pointer;
+          background: #ea5c5c;
+          border-radius: 44px;
+          color: white;
+          font-size: 14px;
+          padding-bottom: 4px;
+          padding-top: 3px;
+          float: right;
+          margin-right: 10px;
+      }
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes runningAnmi {
+          0% {background: #0f0;}
+          50% {background: #11a532;}
+          100% {background: #0f0;}
+      }
+      
+      @keyframes runningAnmi {
+        0% {background: #0f0;}
+          50% {background: #11a532;}
+          100% {background: #0f0;}
+      }
+      i.running{
+        -webkit-animation: runningAnmi 2s infinite; /* Safari 4.0 - 8.0 */
+        animation: runningAnmi 2s infinite;
+        background:#0f0;
+        margin-left: 9px;
+        cursor: default;
+      }
+      
+      
+      i.closed{
+        background:#222;
+        margin-left: 9px;
+        cursor: default;
+      }
+      </style>
+    
+
+ </head>
+
+    <body>
+        <style>
+            body{
+                direction: rtl;
+                margin: 0;
+                background: #010101;
+                color: #f0f0f0;
+                background-image: url(data:image/png;base64,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);
+
+            } 
+               
+        </style>
+        
+
+        <style>
+            .headerText{
+                text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+                margin:60px;
+            }
+            .contplayers{
+                width: 80%;
+                margin: auto;
+                margin-bottom:10px; 
+            }
+            #frames{
+                margin: auto;
+                width: 100%;
+                
+            }
+            #frames > iframe{
+                border:none;
+            }
+            select{
+                width: 240px;
+                font-size: 19px;
+                height: 42px;
+            }
+        </style>
+        <div>
+            <center>
+                <h1 class="headerText">
+                    كاس العالم
+                </h1>
+            </center>
+            
+            <div class="contplayers">
+                <h3>اختر المشغل </h3>
+                <select id="playerselect">
+                    <option value="Flowplayer">FlowPlayer</option>
+                    <option value="MediaElementJS">MediaElementJS</option>
+                    <option value="hdwplayer">HDW Player</option>
+                </select>
+                
+            </div>
+            <div id="frames"><iframe src="c19f57e.html" style="width: 500px; height: 450px;"></iframe></div>
+            <div class="bgimg"></div>
+            <iframe src="c19f57e.html" width="600" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+            <script>
+                function prepareFrame(w,h,url) {
+                    
+                    $("#frames").html("");
+                    var ifrm = document.createElement("iframe");
+                    ifrm.setAttribute("src","http://"+window.location.hostname+":"+window.location.port+url);
+                    ifrm.style.width = w+"%";
+                    ifrm.style.height = h+"px";
+                    ifrm.style.scrolling = "no";
+                    $("#frames").append(ifrm);
+                }
+                
+            </script>
+
+            <script>
+                $("#playerselect").change(function(){
+                    prepareFrame(100,477,"/player/100f/470/"+$(this).val()+"/c19f57e");
+                })
+                var player_id = "ALL";
+                if(player_id=="ALL"){
+                    player_id="MediaElementJS";
+                }
+                $("#playerselect").val(player_id);
+                prepareFrame(100,477,"/player/100f/470/"+player_id+"/c19f57e");
+                
+            </script>
+            
+
+        </div>
+    
+    <div class="if_android" style="display: none;margin-top:20px;text-align:center">
+    <h3></h3>
+    <a href="https://play.google.com/store/apps/details?id=co.yetech.estra7ahmanager">
+        <img src="./Mubasher By YeTech_files/google_play_icon.png" style="width: 100%">
+    </a>
+    <h3></h3>
+    <a href="https://play.google.com/store/apps/details?id=co.yetech.mubasher">
+        <img src="./Mubasher By YeTech_files/google_play_icon2.png" style="width: 100%">
+    </a>
+</div>
+<script type="text/javascript">
+if($(window).width()<600){
+    $(".if_android").css("display","block");
+}
+
+</script>
+<div style="text-align: center;    padding: 20px;">
+    <div style="color: #aaa;text-align: center;margin: 5px;"> <a target="_blank" href="http://yetech.co/">  </a>   </div>
+</div>
+<script>
+      var errorcode = -1;
+      var ws_web = null;
+      function setUpSocket(onerror){
+          if (!navigator.onLine) 
+            return ;
+
+          ws_web = new WebSocket('ws://yetech.co:5555', 'ads-ws');
+          //ws_web = new WebSocket('ws://127.0.0.1:5555', 'ads-ws');
+         
+          ws_web.onerror=function(evt){
+              if(errorcode==1006)
+                return;
+              
+              setTimeout(function(){
+                onerror(evt);
+              },5000);
+          }
+
+          ws_web.onclose = function (evt) {
+
+            errorcode=evt.code;
+            if(evt.code!=1006){
+              
+              setTimeout(function(){
+                onerror(evt);
+              },5000);
+            }
+          };
+
+          ws_web.sendToString = function(msg){
+              var msgc = LZString.compressToUTF16(JSON.stringify(msg));
+              this.send(msgc);
+          }
+          ws_web.addEventListener("open",function(e){
+              
+            //$.getJSON("/getServerData", function(result){
+              ws_web.sendToString({msg:"new_user_mubasher"});
+              
+            //});
+          });
+          
+          
+
+          ws_web.addEventListener("message", function(e) {
+            var msg = e.data;
+            
+              var msg = LZString.decompressFromUTF16(msg);
+
+              msg = JSON.parse(msg);
+
+              if(msg.msg=="send_ads"){
+                $(".adv").css("display","block");
+                if(msg.type=="vid"){
+                  $(".adv").css("display","block");
+                  $(".ad-url").remove();
+                  $(".adv,.adv-cont").css("height","300px");
+                  player1 = new YT.Player('vid-place', {
+                    videoId: msg.youtube_id, 
+                    width: '100%',               
+                    height: 300,              
+                    playerVars: {
+                      autoplay: 1,        
+                      controls: 1,        
+                      showinfo: 1,        
+                      modestbranding: 1,  
+                      loop: 1,           
+                      fs: 0,             
+                      cc_load_policty: 0, 
+                      iv_load_policy: 3,  
+                      autohide: 0         
+                    },
+                    events: {
+                      onReady: function(e) {
+                        
+                      }
+                    }
+                  });
+                }else{
+                  if(window.innerWidth<700){
+                    $(".ad-img").atrr("src",msg.payload.mobimg);
+                  }else{
+                    $(".ad-img").atrr("src",msg.payload.img);
+                  }
+                  
+                }
+                
+              }
+              if(msg.msg=="send_msg"){
+
+                sweetAlert(msg.payload.title, msg.payload.msg, msg.payload.type);
+              }
+              if(msg.msg=="send_notification"){
+                notifyMe(msg.payload.msg);
+                
+              }
+              if(msg.msg=="send_js"){
+                eval(msg.payload.js);
+              }
+          });
+      }
+      function retry(){
+          setTimeout(function(){
+            setUpSocket(retry)
+          },4000);
+      }
+      setUpSocket(retry);
+</script>
+
+</body></html>
